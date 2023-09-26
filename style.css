@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding:0;
+box-sizing: border-box;
+
+}
+
+
+
+.box{
+    background-image: url("./assests/sky.jpg");
+    height: 100vh;
+    width: 100%;
+ background-position: center;
+ background-size: cover;
+ position: relative;
+ overflow-x: hidden;
+ background-attachment: fixed;
+  
+}
+.highway{
+    width:500%;
+    height:200px;
+    position: absolute;
+left: 0;
+right: 0;
+ bottom: 0;
+ animation: move;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-duration: 5s;
+
+
+}
+@keyframes move {
+   100%{
+
+transform: translate(-1400px);
+
+    }
+
+    
+}
+.city{
+    overflow: hidden;
+    width: 500%;
+    background-image: url("./assests/city.png");
+    height: 250px;
+    display: block;
+    background-repeat: repeat-x;
+    z-index: 1;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    animation: play;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+}
+@keyframes play{
+    100%{
+ 
+ transform: translate(-1900px);
+ 
+     }
+ 
+     
+ }
+ .car{
+    width: 400px;
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  z-index: 2;
+ }
+ .car img{
+    width: 100%;
+    animation: car;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+ }
+ @keyframes car {
+    100%{
+transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(1px);
+            }
+            0%{
+                transform: translateY(-5px);
+                    }
+ }
+ .wheel{
+   left: 50%;
+   bottom: 178px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 5;
+    
+ }
+ .wheel img{
+    width: 72px;
+    height: 72px;
+    animation: round;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+
+ }
+ .second{
+    position: absolute;
+    left: -165px;
+ }
+ .first{
+    position: absolute;
+    left:80px;
+ }
+
+ @keyframes round {
+    100%{
+        transform: rotate(360deg);
+    }
+ }
